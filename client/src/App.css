@@ -35,12 +35,12 @@ a:active{
 .bigName{
   margin-left: 1em;
   font-family: 'Poiret One', cursive;
-  font-size: 27pt;
+  font-size: 27px;
   letter-spacing: 3px;
 }
 
 .logo{
-  height: 24pt;
+  height: 24px;
   vertical-align: text-bottom
 }
 
@@ -49,20 +49,29 @@ a:active{
 }
 
 .poster{
-  width: 340px;
-  height: 505px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   box-shadow: 10px 10px 5px rgb(216, 216, 216);
 }
 
 .actionBtn_container{
-  margin-top: 4vh
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.action{
+  cursor: pointer;
+  margin: 0 8px
 }
 
 .actionBtn{
-  border: 5px solid #343A40;
-  height: 100px;
-  width: 100px;
+  /* border: 2px solid #343A40; */
+  font-size: 48px;
+
   /* padding: 3px 3px 3px 3px; */
   border-radius: 50%;
 }
@@ -72,11 +81,11 @@ a:active{
 }
 
 .buttonIcon{
-  font-size: 46pt
+  font-size: 46px
 }
 
 .starsBtns{
-  font-size: 46pt
+  font-size: 48px
 }
 
 .unknownBtn_container{
@@ -88,7 +97,7 @@ a:active{
 
 .unknownBtn{
   color: #4A4A4A!important;
-  font-size: 28pt;
+  font-size: 28px;
 
 }
 
@@ -96,28 +105,31 @@ a:active{
   color:rgb(145, 145, 145)!important
 }
 
+.card-header{
+  cursor: pointer;
+}
 
 
 @media (max-width: 600px) {
     
   .actionBtn{
-    border: 2.5px solid #343A40;
-    height: 80px;
-    width: 80px;
+    font-size: 48px;
+    /* border: 2.5px solid #343A40; */
+
   }
 
   .buttonIcon{
-    font-size: 36pt
+    font-size: 36px
   }
 
 
   .starsBtns{
-    font-size: 36pt
+    font-size: 32px
   }
 
 
   .unknownBtn{
-  font-size: 20pt;
+  font-size: 20px;
   }
 
 }
@@ -126,18 +138,18 @@ a:active{
 @media (max-width: 370px) {
       
   .actionBtn{
-    border: 2.5px solid #343A40;
-    height: 60px;
-    width: 60px;
+    font-size: 32px;
+    /* border: 2.5px solid #343A40; */
+
   }
 
   .buttonIcon{
-    font-size: 24pt
+    font-size: 24px
   }
 
 
   .starsBtns{
-    font-size: 24pt
+    font-size: 24px
   }
 
 
@@ -160,7 +172,7 @@ footer{
   height: 80px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 12pt;
+  font-size: 12px;
   font-weight: 400;
   color: gray;
   font-family: 'Roboto', sans-serif;
@@ -180,10 +192,11 @@ footer{
 .carousel_container{
   margin-top: 8vh;
   display: block;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 650px;
+  /* height: 650px; */
   box-shadow: ivory
 }
 /* 
@@ -199,7 +212,7 @@ footer{
   background-size: 100%, 100%;
 }
 
-.carousel-caption{
+.carousel-capxion{
   color: #4a4a4a
 }
 
@@ -239,7 +252,9 @@ footer{
 
 .card-container {
   position: relative;
-  
+  width: 340px;
+  height: 505px;
+  margin: 0 auto 0
 }
 
 .article-title {
@@ -254,6 +269,38 @@ footer{
   text-align: left;
 }
 
+.btn-container{
+  padding:24px 0 4px 0;
+  max-width: 340px;
+  margin: 0 auto 0
+}
+
+.line-btn{
+  color: #FCFCFC!important;
+  cursor: pointer;
+  display: inline;
+}
+
+.line-btn:hover{
+  opacity: 0.8
+}
+
+ 
+.black-btn{
+  background-color: #333333;
+  padding: 4px 8px;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline;
+}
+
+.black-btn:hover{
+  background-color: #4F4F4F;
+
+}
+
+
 .overlay {
   position: absolute;
   top: 0;
@@ -265,24 +312,28 @@ footer{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
   transition: .5s ease;
   z-index:2;
-  background-color: #dfdedeec
+  background-color: #000000;
 }
 
 
-.card-container:hover .overlay{
-  opacity: 1;
+.movie-title{
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  margin: 0 0 8 0px;
 }
 
 .movie-overview{
   width: 280px;
   height: 288px;
   overflow: scroll;
+  color: white;
   /* white-space: nowrap; */
   /* text-overflow: scroll; */
 }
+
 
 .layoutBtn:hover{
   color:lightgray!important
@@ -302,7 +353,7 @@ footer{
   height: 100%
 }
 .detail_title{
-  font-size: 18pt;
+  font-size: 18px;
   font-weight: 600
 }
 

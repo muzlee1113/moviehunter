@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";
+import Poster from "../Poster"
 
 
 const posterStyle={
@@ -31,23 +32,7 @@ class ResultCarousel extends Component {
     }
 
     render() {
-        const results = this.props.results.map((movie) => (
-            <Link to={"/movie/" + movie.id}>
-            <div className="card-container">
-                <img 
-                style={posterStyle}
-                src={"http://image.tmdb.org/t/p/w400/"+ movie.poster_path}
-                onDragStart={handleOnDragStart} className="yours-custom-class" />
-                <div className="overlay">
-                    <div className="article-title">
-                        <h3>{movie.title}</h3>
-                        <p>popularity: {movie.popularity}</p>
-                        <div className="movie-overview">{movie.overview}</div>
-                    </div>
-                </div>
-            </div>
-            </Link>
-        ))
+        const results = this.props.results.map((movie) => (<Poster movie={movie}/>))
 
         return (
             <div className="carousel_container">

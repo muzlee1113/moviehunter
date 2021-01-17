@@ -43,7 +43,7 @@ function MovieCard(props) {
                             <Card>
                                 <Accordion.Toggle as={Card.Header} eventKey="0">
                                     Basic Info
-                                                </Accordion.Toggle>
+                                </Accordion.Toggle>
                                 <Accordion.Collapse eventKey="0">
                                     <Card.Body>
                                         <Card.Text>
@@ -60,7 +60,7 @@ function MovieCard(props) {
                             <Card>
                                 <Accordion.Toggle as={Card.Header} eventKey="2">
                                     Rating
-                                                </Accordion.Toggle>
+                                </Accordion.Toggle>
                                 <Accordion.Collapse eventKey="2">
                                     <Card.Body>
                                         <Card.Text>
@@ -76,7 +76,7 @@ function MovieCard(props) {
                             <Card>
                                 <Accordion.Toggle as={Card.Header} eventKey="3">
                                     Production
-                                                </Accordion.Toggle>
+                                </Accordion.Toggle>
                                 <Accordion.Collapse eventKey="3">
                                     <Card.Body>
                                         <Card.Text>

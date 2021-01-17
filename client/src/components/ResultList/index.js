@@ -30,7 +30,7 @@ class ResultList extends Component {
                     <Card className="my-3">
                         <Row className="align-items-center justify-content-around" noGutters={true}>
                             <Col xs={12} sm={12} md={3} lg={3} xl={3}>
-                            <Card.Img className="listPoster center" variant="top" src={"http://image.tmdb.org/t/p/w400/"+ movie.poster_path} />
+                                <Card.Img className="listPoster center" variant="top" src={"http://image.tmdb.org/t/p/w400/"+ movie.poster_path} />
                             </Col>
                             <Col xs={12} sm={12}  md={9} lg={9} xl={9}>
                                 <Card.Body className="m-3">

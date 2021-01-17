@@ -21,15 +21,9 @@ class App extends Component {
       <Header/>
       <Router>
           <Switch>
-            <Route exact path="/" 
-            render={props=><Search {...props} />} 
-            />
-            <Route exact path="/result" 
-            render={props=><Result {...props}  />}
-            />
-            <Route exact path="/movie/:id" 
-            component={MovieDetail}  />}
-            />
+            <Route exact path="/" render={props=><Search {...props}/>} />
+            <Route exact path="/result" render={props=><Result {...props} />}/>
+            <Route exact path="/movie/:id" component={MovieDetail}  />
             <Route component={NoMatch} />
           </Switch>
       </Router>

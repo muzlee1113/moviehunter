@@ -12,7 +12,7 @@ class StarsRating extends Component {
  
     render() {
       // rating = 2;
-      return (
+      return (<>
         <div className="text-center actionBtn_container">
             <Rating
                 className="starsBtns mb-2"
@@ -22,22 +22,16 @@ class StarsRating extends Component {
                 onClick={this.props.starRatingChangeHandler}
             /> 
 
-            <OverlayTrigger
-                placement="bottom"
-                overlay={
-                    <Tooltip id={`tooltip-${"bottom"}`}>
-                        Pass! Haven't seen it.
-                    </Tooltip>
-                }
-            >
-            <span onClick={(e)=>this.props.starRatingChangeHandler("")} className="unknownBtn_container ml-3">
-                <i className="fas fa-arrow-circle-right unknownBtn"></i>
+            
+            <div onClick={(e)=>this.props.starRatingChangeHandler("")} className="unknownBtn_container ml-3">
+                <i className="fas fa-arrow-right unknownBtn"></i>
+                <div classNam="mr-2">Pass!</div>
                 {/* <Button className="unknownBtn" variant="outline-dark"><i className="fas fa-arrow-right"></i></Button> */}
-            </span>
-            </OverlayTrigger>
-            <div>Rate the movie on a 5-star scale!</div>
+              
+            </div>
         </div>
-      )
+        <div>Rate the movie on a 5-star scale!</div>
+      </>)
      
     }
 }
